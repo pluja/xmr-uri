@@ -34,27 +34,33 @@ See it live here: [uri.xmr.fan](https://uri.xmr.fan)
 
 Open `index.html` in a browser and use the form to generate Monero URIs and QR codes.
 
+You can also serve the repo folder using Python:
+
+```bash
+python3 -m http.server 8000
+```
+
 ### 2. URL Parameter Generation
 
 #### Direct URI Generation
 
 ```
-index.html?address=44AFFq5kSiGBoZ...&tx_amount=1.5&recipient_name=Donation
+https://uri.xmr.fan/?address=44AFFq5kSiGBoZ...&tx_amount=1.5&recipient_name=Donation
 ```
 
 #### Raw QR Code
 
 ```
-index.html?address=44AFFq5kSiGBoZ...&tx_amount=1.5&rawqr
+https://uri.xmr.fan/?address=44AFFq5kSiGBoZ...&tx_amount=1.5&rawqr
 ```
 
 #### Raw URI Text
 
 ```
-index.html?address=44AFFq5kSiGBoZ...&tx_amount=1.5&raw
+https://uri.xmr.fan/?address=44AFFq5kSiGBoZ...&tx_amount=1.5&raw
 ```
 
-## Technologies Used
+## Tech Stack
 
 - HTML5
 - Vanilla JavaScript
@@ -65,12 +71,8 @@ index.html?address=44AFFq5kSiGBoZ...&tx_amount=1.5&raw
 
 1. Clone the repository
 2. Open `index.html` directly in a web browser
+    - You can also serve with Python by running `python3 -m http.server 8000` in the repo folder
 3. No additional setup or server required
-
-## Browser Compatibility
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- No IE support
 
 ## Contributing
 
@@ -83,10 +85,6 @@ index.html?address=44AFFq5kSiGBoZ...&tx_amount=1.5&raw
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Project Link: [Your GitHub Repository URL]
 
 ## Donation
 
