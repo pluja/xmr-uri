@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monero URI Generator</title>
+    <script src="js/qrcode.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+</head>
+<body class="bg-gray-100 min-h-screen p-8">
+    <div id="mainContent" class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">Monero URI Generator</h1>
+        
+        <form id="moneroForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Monero Address</label>
+                <input type="text" id="address" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500" required>
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Amount (XMR)</label>
+                <input type="number" id="amount" step="any" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Payment ID</label>
+                <input type="text" id="paymentId" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Recipient Name</label>
+                <input type="text" id="recipientName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Description</label>
+                <input type="text" id="description" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500">
+            </div>
+            
+            <button type="submit" class="w-full bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
+                Generate URI and QR Code
+            </button>
+        </form>
+        
+        <div class="mt-8 space-y-4">
+            <div id="uriOutput" class="p-4 bg-gray-50 rounded-md break-all hidden"></div>
+            <div id="qrCode" class="flex justify-center"></div>
+        </div>
+
+        <div class="mt-8 space-y-4">
+            <h2 class="text-xl font-semibold text-gray-800">API Usage</h2>
+            <div class="space-y-2 text-sm text-gray-600">
+                <p>Add these parameters to the URL:</p>
+                <ul class="list-disc pl-5">
+                    <li>?rawqr - Returns QR code as PNG image</li>
+                    <li>?raw - Returns raw Monero URI as text</li>
+                    <li>Parameters: address, tx_amount, tx_payment_id, recipient_name, tx_description</li>
+                </ul>
+                <p>Example: <span class="font-mono text-xs">index.html?address=44AFFq5kSiGBoZ...&tx_amount=1.5&rawqr</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
