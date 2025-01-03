@@ -1,5 +1,7 @@
 # Monero URI Generator & QR Code Tool
 
+> [uri.xmr.fan](https://uri.xmr.fan)
+
 ## Overview
 
 A simple, serverless web application for generating Monero URIs and QR codes with flexible configuration options. This tool allows users to:
@@ -8,7 +10,6 @@ A simple, serverless web application for generating Monero URIs and QR codes wit
 - Generate QR codes for Monero addresses
 - Use URL parameters for dynamic URI generation
 
-See it live here: [uri.xmr.fan](https://uri.xmr.fan)
 
 ## Features
 
